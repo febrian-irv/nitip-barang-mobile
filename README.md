@@ -33,9 +33,9 @@ Perbedaan utama antara stateless dan stateful widget adalah bagaimana respon wid
 - Menghubungkan projek pada direktori lokal tersebut dengan repositori github.
 
 ##### ✅ Membuat tiga tombol sederhana dengan ikon dan teks untuk:
--> Melihat daftar item (Lihat Item)
--> Menambah item (Tambah Item)
--> Logout (Logout)
+-> Melihat daftar item (Lihat Item)  
+-> Menambah item (Tambah Item)  
+-> Logout (Logout)  
 
 - Membuat Widget MyHomePage yang akan menjadi struktur dasar dari homepage
 - Membuat suatu class yang akan menjadi penyimpan data dari tiap tombol.
@@ -43,9 +43,9 @@ Perbedaan utama antara stateless dan stateful widget adalah bagaimana respon wid
 - Membuat widget yang menjadi child dari MyHomePage bernama ShopCard yang akan menghandle items pada MyHomePage untuk dibentuk menjadi sebuah tombol.
 
 ##### ✅ Memunculkan Snackbar dengan tulisan:
--> "Kamu telah menekan tombol Lihat Item" ketika tombol Lihat Item ditekan.
--> "Kamu telah menekan tombol Tambah Item" ketika tombol Tambah Item ditekan.
--> "Kamu telah menekan tombol Logout" ketika tombol Logout ditekan.
+-> "Kamu telah menekan tombol Lihat Item" ketika tombol Lihat Item ditekan.  
+-> "Kamu telah menekan tombol Tambah Item" ketika tombol Tambah Item ditekan.  
+-> "Kamu telah menekan tombol Logout" ketika tombol Logout ditekan.  
 
 - Pada build dari ShopCard mempersiapkan OnTap yang akan menghandle jika ShopCard diklik, untuk kasus ini dengan ScaffoldMessenger
 - Pada ScaffoldMessenger akan memembentuk Snackbar yang muncul jika diklik dan berisi data sesuai items yang diklik.
