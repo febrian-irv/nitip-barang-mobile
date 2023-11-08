@@ -12,10 +12,18 @@
 Perbedaan utama antara stateless dan stateful widget adalah bagaimana respon widget saat terjadi interaksi dari pengguna. Dalam stateful widget terdapat suatu state yang menyimpan data dari objek dan data tersebut berkemungkinan untuk berubah selama 'lifetime' dari widget tersebut, contohnya adalah Checkbox dan Form. Berbeda dengan stateful, stateless widget memiliki state yang tidak akan berubah setelah state tersebut dibentuk, contohnya bisa berupa Text atau IconButtons.
 
 #### 2️⃣ Sebutkan seluruh widget yang kamu gunakan untuk menyelesaikan tugas ini dan jelaskan fungsinya masing-masing.
-Terdapat 3 widget yang digunakan pada tugas ini dan ketiganya merupakan Stateless Widget:
-1. MyApp: Membentuk struktur dasar dari aplikasi yang dibuat.
-2. MyHomePage: Merupakan child dari MyApp yang akan lebih rinci membentuk struktur dari homepage serta akan menjadi parent untuk komponen widget lain didalamnya.
-3. ShopCard: Merupakan widget yang akan menjadi tombol dan memberikan interaksi saat ditekan.
+1. Scaffold: Sebagai dasar dari material design.
+2. AppBar: Sebagai bagian atas aplikasi yang biasa berisi nama aplikasi.
+3. Padding: Memberi padding terhadap child.
+4. Text: Menampilkan paragraf teks.
+5. Container: Sebuah box yang yang menyimpan widget lain.
+6. Material: Implementasi material design visual.
+7. InkWell: Material widget yang memberi respon splash saat interaksi.
+8. SnackBar: Pesan teks sementara pada bagian bawah layar.
+9. Icon: Menampilkan Icon.
+10. Center: Menengahkan child.
+11. ThemeData: Mendefinisikan tema dari aplikasi.
+12. ColorScheme: Mendefinisikan kumpulan warna yang digunakan untuk konfigurasi tema.
 
 #### 3️⃣ Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
 
