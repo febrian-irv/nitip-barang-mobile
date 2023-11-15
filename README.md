@@ -3,6 +3,55 @@
 
 # Pemrograman Berbasis Platform - Mobile🐼
 
+## Tugas 8: Flutter Navigation, Layouts, Forms, and Input Elements
+<details>
+<summary>Click for more detail</summary>
+<br>
+
+#### 1️⃣ Jelaskan perbedaan antara Navigator.push() dan Navigator.pushReplacement(), disertai dengan contoh mengenai penggunaan kedua metode tersebut yang tepat!
+Navigator pada flutter menggunakan sistem stack dimana dengan metode Navigator.push() akan menambah stack pada layar sehingga page yang berada pada parameter push akan berada diatas stack layar teratas. Navigator.pushReplacement() akan mengganti layer teratas dari stack dengan layer baru pada parameter pushReplacement sehingga jumlah stack masih sama.
+Contoh:
+- push: Terdapat halaman katalog yang menampilkan seluruh ketersediaan barang dan pada setiap barang dapat diekspansi detail. Maka saat terjadi interaksi dengan detail barang, detail barang akan muncul diatas katalog tersebut dan dapat di pop untuk kembali ke katalog.
+- pushReplacement: Pada saat login dan user telah diautentikasi maka saat mau berpindah ke laman beranda dapat menggunakan pushReplacement karena login sudah tidak berhubungan dengan beranda atau proses autentikasi. Jika laman beranda dilakukan pop maka tidak kembali ke login.
+
+#### 2️⃣ Jelaskan masing-masing layout widget pada Flutter dan konteks penggunaannya masing-masing!
+1. Single-child layout widget: Mengontrol satu child yang dikontrol berdasarkan posisi dan ukuran parent. contohnya: Align, Center, Container.
+2. Multi-child layout widgets: Untuk mengontrol posisi dari beberapa child dalam satu layout. contohnya: Row, Column, Stack.
+3. Sliver widgets: Untuk melakukan kontrol spesial yang biasanya berhubungan dengan efek custom scrolling. contohnya: SliverList, SliverGrid, SliverAppBar.
+
+#### 3️⃣ Sebutkan apa saja elemen input pada form yang kamu pakai pada tugas kali ini dan jelaskan mengapa kamu menggunakan elemen input tersebut!
+Pada tugas ini digunakan widget TextFormField untuk menerima input, penggunaan widget ini karena pengguna dapat menginput segala jenis karakter untuk dimasukkan ke dalam field dan validasinya dilakukan dengan menggunakan conditionals setelah user memasukkan input sehingga dapat menghindari exception.
+elemen yang diminta adalah:
+- Nama Barang: untuk menyimpan nama penitip barang.
+- Jumlah Barang: untuk mengetahui jumlah barang yang dititipkan.
+- Deskripsi Barang: untuk mengetahui detail dari barang.
+
+#### 4️⃣ Bagaimana penerapan clean architecture pada aplikasi Flutter?
+Penerapannya adalah dengan melakukan pengelompokan terhadap file-file yang terdapat pada folder lib sesuai dengan fungsionalitasnya sehingga terlihat adanya seperation of concerns. Pada projek ini menggunakan folder baru yaitu screens sebagai folder yang menyimpan laman-laman yang terdapat pada aplikasi tersebut dan terdapat folder widgets yang menyimpan class widget yang telah dibuat oleh pengembang perangkat lunak.
+Secara umum clean architecture pada flutter ada tiga yaitu, feature layer yang merepresentasikan aplikasi dan terdapat event handler, domain layer yangberguna dalam logic dari aplikasi, dan data layer yang berguna untuk mengambil data yang bisa dalam bentuk API call atau local database.
+
+#### 5️⃣ Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+
+##### ✅ Membuat minimal satu halaman baru pada aplikasi, yaitu halaman formulir tambah item baru
+- membuat folder screen pada lib yang akan menjadi tempat file form_nitip.dart:
+- membuat class ShopFormPage dan ShopFormPageState.
+- Pada ShopFormPageState, build widget yang berisi body berupa Form widget dengan 3 child yaitu nama, jumlah, dan deskripsi.
+- membuat tombol save.
+
+##### ✅ Mengarahkan pengguna ke halaman form tambah item baru ketika menekan tombol Tambah Item pada halaman utama.
+- pada menu.dart ketika nama item yang ditekan adalah "Tambah item" maka panggil Navigator.push yang akan mengarahkan ke ShopFormPage.
+
+##### ✅  Memunculkan data sesuai isi dari formulir yang diisi dalam sebuah pop-up setelah menekan tombol Save pada halaman formulir tambah item baru.
+- saat tombol save ditekan membuat isi dari onPressed yang berisi data-data yang baru saja dimasukkan dengan menggunakan dialog.
+
+##### ✅  Membuat sebuah drawer pada aplikasi
+- membuat folder widgets yang akan berisi left_drawer.dart
+- pada file tersebut akan dibuat class yang build widget dengan mereturn widget Drawer.
+- pada Drawer akan memiliki children ListTile jika di tekan akan navigate ke laman yang dituju.
+
+
+</details>
+
 ## Tugas 7: Elemen Dasar Flutter
 <details>
 <summary>Click for more detail</summary>

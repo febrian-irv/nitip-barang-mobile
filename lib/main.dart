@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nitip_barang_mobile/menu.dart';
+import 'package:nitip_barang_mobile/screens/menu.dart';
 
 void main() {
   runApp(const MyApp());
