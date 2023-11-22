@@ -8,6 +8,60 @@
 <summary>Click for more detail</summary>
 <br>
 
+#### 1️⃣ Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Iya, kita bisa melakukan pengambilan data JSON tanpa model yaitu hanya mengambil data JSON dan mengambil data menggunakan key seperti layaknya dictionary. Namun, pendekatan ini tidak lebih baik daripada menggunakan model karena dengan penggunaan model kita bisa memisahkan data-data dalam bentuk objek yang lebih jelas dari pada key-value pair sehingga pengaksesan data sesuai objek akan lebih mudah.
+
+#### 2️⃣ Jelaskan fungsi dari CookieRequest dan jelaskan mengapa instance CookieRequest perlu untuk dibagikan ke semua komponen di aplikasi Flutter.
+Sebagai class yang dapat menyimpan data terhadap sesi pengguna. Instance ini perlu dibagikan ke semua komponen agar setiap komponen mendapatkan data yang sama pada setiap sesi dan setiap komponen akan relevan terhadap sesi terakhir.
+
+#### 3️⃣ Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.
+- Pembuatan models yang berisi class dari objek serta fields yang akan digunakan oleh objek tersebut.
+- Dilakukan fetch data dari web app django yang mempunyai data JSON dan di decode.
+- Dari setiap data akan diiterasi dan diproses agar data dimasukkan ke class dan membentuk objek tersendiri.
+
+#### 4️⃣ Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.
+- Membuat variabel input pada flutter untuk user dan password.
+- Memanggil fungsi login pada django dari flutter dengan mencantumkan parameter variabel user dan password. Memanfaatkan request cookie request.
+- fungsi login pada django akan memproses user dan password dan mereturn response JSON sebagai penanda terautentikasi atau tidak.
+- Jika response login terautentikasi maka akan berpindah ke homepage.
+
+#### 5️⃣ Sebutkan seluruh widget yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.
+- FutureBuilder: untuk mengerjakan task asinkronus
+- ListView: untuk display scrollable list of widget
+- SizedBox: Membuat box dengan spesifikasi ukuran tertentu
+
+#### 6️⃣ Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+
+##### ✅ Memastikan deployment proyek tugas Django kamu telah berjalan dengan baik.
+- Dengan mengupdate kebutuhan settings pada projek django agar tidak terjadi konflik saat pengitegrasian
+- mengudate requirements.txt agar semua modul yang dibutuhkan terpenuhi.
+
+##### ✅  Membuat halaman login pada proyek tugas Flutter.
+- Membuat halaman login yang diletakkan pada screens.
+- membuat field yang dihubungkan dengan suatu variabel yang akan menyimpan user dan password.
+
+##### ✅ Mengintegrasikan sistem autentikasi Django dengan proyek tugas Flutter.
+- membuat fungsi login pada django yang akan menerima data password dan user dan mereturn json.
+- membuat routing pada login.
+- setelah memasukkan data password dan user pada field flutter, proses autentikasi dengan memanfaatkan cookie request untuk mengakses fungsi pada django dan mereturn json hasil autentikasi.
+- memindahkan ke laman homepage apabila terautentikasi.
+
+##### ✅ Membuat halaman yang berisi daftar semua item yang terdapat pada endpoint JSON di Django yang telah kamu deploy.
+- membuat model item sebagai penyimpan field data
+- melakukan fetch data dari laman json web django dan diubah ke bentuk objek item yang telah dibuat.
+- megiterasikan tiap data dari objek untuk ditampilkan.
+
+##### ✅ Membuat halaman detail untuk setiap item yang terdapat pada halaman daftar Item.
+- membuat tombol detail pada tiap item
+
+
+</details>
+
+## Tugas 8: Flutter Navigation, Layouts, Forms, and Input Elements
+<details>
+<summary>Click for more detail</summary>
+<br>
+
 #### 1️⃣ Jelaskan perbedaan antara Navigator.push() dan Navigator.pushReplacement(), disertai dengan contoh mengenai penggunaan kedua metode tersebut yang tepat!
 Navigator pada flutter menggunakan sistem stack dimana dengan metode Navigator.push() akan menambah stack pada layar sehingga page yang berada pada parameter push akan berada diatas stack layar teratas. Navigator.pushReplacement() akan mengganti layer teratas dari stack dengan layer baru pada parameter pushReplacement sehingga jumlah stack masih sama.
 Contoh:
