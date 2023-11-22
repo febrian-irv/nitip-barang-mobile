@@ -53,7 +53,8 @@ Sebagai class yang dapat menyimpan data terhadap sesi pengguna. Instance ini per
 
 ##### ✅ Membuat halaman detail untuk setiap item yang terdapat pada halaman daftar Item.
 - membuat tombol detail pada tiap item
-
+- saat tombol ditekan akan membuka page detail sekaligus mengirimkan data detail item pada page tersebut.
+- page tersebut akn mendisplay tiap detail item
 
 </details>
 
